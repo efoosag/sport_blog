@@ -9,7 +9,7 @@
           </div>
           <div class="card-body">
             <h5 class="card-title"><%= link_to article.title, article_path(article), class: "text-success text-decoration-none" %></h5>
-            <p class="card-text"><%= article.description %></p>
+            <p class="card-text"><%= simple_format(truncate(article.description, length: 40)) %></p>
             <div>
               <%= link_to 'View', article_path(article), class: "btn btn-outline-success" %>
               <%= link_to 'Edit', edit_article_path(article), class: "btn btn-outline-info"  %>
