@@ -1,22 +1,22 @@
-<h2 class='text-center mt-4'>Article about <%= link_to @article.title.capitalize, article_path(@article), class: 'text-decoration-none' %></h2>
+<h2 class='text-center mt-4'>Article about <%= @article.title.capitalize %></h2>
   <div class="container">  
     <div class="row justify-content-md-center">
       <div class = "col-8">             
         <div class="card text-center mt-4 shadow mb-5 bg-body rounded">
-          <div class="card-header font-itallic">
+          <h4 class="card-header font-itallic text-success">
             By Victor Osagie
-          </div>
+          </h4>
           <div class="card-body">
-            <p class="card-text"><%= simple_format(@article.description) %></p>
+            <div class="card-text"><%= simple_format(@article.description) %></div>
             <div>              
               <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-outline-info"  %>
               <%= link_to 'Delete', article_path(@article), data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-outline-danger" %>
-              </div>
+            </div>
           </div>
           <div class="card-footer text-muted">
             <small>Created <%= time_ago_in_words(@article.created_at) %> ago, Edited <%= time_ago_in_words(@article.updated_at) %> ago</small>
           </div>
-        </div>      
+        </div>
+       </div>       
     </div>
   </div>
-</div
