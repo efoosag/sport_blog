@@ -5,6 +5,7 @@
         <div class="card text-center mt-4 shadow mb-5 bg-body rounded">
           <h4 class="card-header font-itallic text-success">
             By <%= @article.user.username %>
+            <%= link_to user_gravatar(@article.user), user_path(@article.user) %>
           </h4>
           <div class="card-body">
             <div class="card-text"><%= simple_format(@article.description) %></div>
