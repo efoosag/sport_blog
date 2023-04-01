@@ -1,5 +1,7 @@
 <h1 class='text-center mt-3'>Allsport Users</h1>
-
+<div class="flickr_pagination"> 
+  <%= will_paginate @users, :container => false %>
+</div>
 <div class="container">  
   <div class="row justify-content-md-center">
     <div class = "col-8 mb-5">
@@ -23,4 +25,7 @@
       <% end %>
     </div>
   </div>
-</div
+</div>
+<div class="flickr_pagination mb-3"> 
+  <%= will_paginate @users, :container => false %>
+</div>
